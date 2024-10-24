@@ -1,15 +1,9 @@
-using Latios.Transforms.Systems;
-using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
-using Unity.Jobs;
-using Unity.Mathematics;
 
 namespace Latios.Psyshock.Anna.Systems
 {
     [DisableAutoCreation]
-    [UpdateInGroup(typeof(SimulationSystemGroup))]
-    [UpdateBefore(typeof(TransformSuperSystem))]
+    [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
     public partial class AnnaSuperSystem : RootSuperSystem
     {
         protected override void CreateSystems()
